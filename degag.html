@@ -11,22 +11,26 @@
             font-family: 'Varela', sans-serif;
             font-size: 14px;
         }
-        header,footer {
-            background-color:rgb(1, 58, 58);
+
+        header, footer {
+            background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
-         /* Style de base du menu */
-         nav {
+
+        /* Style de base du menu */
+        nav {
             background-color: #333;
             padding: 10px;
         }
@@ -53,15 +57,82 @@
             display: block;
             transition: background-color 0.3s;
         }
+
         .menu a:hover {
             background-color: #575757;
             /* Couleur au survol */
         }
+
+        .toggle-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-title {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ;
+        }
+
+        .toggle-title:hover {
+            background-color: #ececec;
+            /* Couleur au survol */
+        }
+
+        .toggle-title::after {
+            content: "+";
+            /* Ajouter une icône */
+            font-size: 20px;
+            color: #007BFF;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-title.open::after {
+            content: "-";
+            /* Icône pour indiquer qu'il est ouvert */
+            transform: rotate(180deg);
+        }
+
+        .toggle-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #444;
+            text-align:center;
+            padding: 15px 30px;
+            border: 4px dashed #FF5722;
+            border-radius: 12px;
+            background-color: #FFF3E0;
+            display: block;
+            margin: 30px auto;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Dégagement de vos encombrant</h1>
+        <h1>Degagement d'emcombrant/autres</h1>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -70,5 +141,45 @@
             </ul>
         </nav>
     </header>
+    <h2>Les Petits Travaux de CoCo</h2>
+    <div class="toggle-item">
+        <p class="toggle-title">Dégagement</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Dégager des espaces verts</li>
+                <li>Dégager des meubles d'interieur et exterieur</li>
+                <li>Dégager des cartons d'électroménager / électrique</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle-item">
+        <p class="toggle-title">Prestation supplementaire</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Emballer des objets en vue d'un déménagement</li>
+                <li>Nettoyer et remettre en état après un dégâts des eaux</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript pour afficher/masquer le contenu
+        document.querySelectorAll('.toggle-title').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+
+                // Basculer la classe 'open' pour changer l'icône
+                item.classList.toggle('open');
+
+                // Afficher ou masquer le contenu
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
