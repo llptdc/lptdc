@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPTDC</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Varela', sans-serif;
+            font-size: 14px;
+        }
+        header {
+            background-color:rgb(1, 58, 58);
+            color: white;
+            padding: 0px 30px;
+
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .btn {
+            background-color: darkcyan;
+            color:white;
+            border:none;
+            padding: 10px 20px;
+            margin: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+ /* Style de base du menu */
+ nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu {
+            list-style: none;
+            /* Pas de puces */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Alignement horizontal */
+        }
+
+        .menu>li {
+            position: relative;
+            /* Pour le positionnement des sous-menus */
+            margin-right: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #575757;
+            /* Couleur au survol */
+        }
+    </style>
+<head>
+<body>
+    <header>
+        <h1>LPTDC</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="rendez.html">Prendre rendez-vous</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>Les Petits Travaux De CoCo</div>
+    <a href="exter.html" class="btn">Travaux d'Exterieur</a>
+    <a href="inter.html" class="btn">Travaux d'Interieur</a>
+    <a href="degag.html" class="btn">Degagement de vos encombrant</a>
+</body>
+</html>

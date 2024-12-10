@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaux d'Interieur</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Varela', sans-serif;
+            font-size: 14px;
+        }
+
+        header, footer {
+            background-color: rgb(1, 58, 58);
+            color: white;
+            padding: 0 15px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Style de base du menu */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu {
+            list-style: none;
+            /* Pas de puces */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Alignement horizontal */
+        }
+
+        .menu>li {
+            position: relative;
+            /* Pour le positionnement des sous-menus */
+            margin-right: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+            /* Couleur au survol */
+        }
+
+        .toggle-item {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .toggle-title {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ;
+        }
+
+        .toggle-title:hover {
+            background-color: #ececec;
+            /* Couleur au survol */
+        }
+
+        .toggle-title::after {
+            content: "+";
+            /* Ajouter une icône */
+            font-size: 20px;
+            color: #007BFF;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-title.open::after {
+            content: "-";
+            /* Icône pour indiquer qu'il est ouvert */
+            transform: rotate(180deg);
+        }
+
+        .toggle-content {
+            display: none;
+            padding: 15px;
+            background-color: #fff;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #444;
+            text-align:center;
+            padding: 15px 30px;
+            border: 4px dashed #FF5722;
+            border-radius: 12px;
+            background-color: #FFF3E0;
+            display: block;
+            margin: 30px auto;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Travaux d'Interieur</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="rendez.html">Prendre rendez-vous</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Les Petits Travaux de CoCo</h2>
+    <div class="toggle-item">
+        <p class="toggle-title">Electricité</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Changer une ampoule, un fusible</li>
+                <li>Accrocher / décrocher / remplacer un lustre, des luminaires, un radiateur électrique</li>
+                <li>Fixer / changer / reparer une prise, un interupteur électrique</li>
+                <li>Poser / remplacer un detecteur de fumée, un capteur de présence</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle-item">
+        <p class="toggle-title">Plomberie</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Déboucher un evier / un lavabo</li>
+                <li>Remplacer un siphon d'évier / lavabo</li>
+                <li>Purger les radiateurs</li>
+                <li>Poser / changer joint de baignoire, de lavabo, d'évier</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle-item">
+        <p class="toggle-title">Travaux de fixation / installation / autre</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Installer des triangles à rideau</li>
+                <li>Déplacer / déposer / ajuster un meuble</li>
+                <li>Monter / démonter un meuble en kit</li>
+                <li>fixer un miroir, un tableau au mur</li>
+                <li>fixer un accessoire de salle de bains, un rideau ou un pare-douche, une barre d'appui</li>
+                <li>Remplacer un flexible de douche, un abattant ou mécanisme dans les toilettes</li>
+                <li>Installer une étagère</li>
+                <li>Poser un store, une moustiquaire</li>
+                <li>Remplacer une poignée de porte, une serrure</li>
+                <li>Installer un verrou, une chatière</li>
+                <li>Graisser une porte, un volet, une fenêtre</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toggle-item">
+        <p class="toggle-title">Petit travaux de peinture / de rebouchage / de revêtement</p>
+        <div class="toggle-content">
+            <ul>
+                <li>Faire une retouche de peinture / de papier peint</li>
+                <li>Poncer, repeindre ou vernir un meuble</li>
+                <li>Reprendre des joints de carrelage</li>
+                <li> Reboucher une fissure, un trou</li>
+                <li>Remplacer / recoller un carreau de sol</li>
+                <li>Dépose de papier peint, moquette</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript pour afficher/masquer le contenu
+        document.querySelectorAll('.toggle-title').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+
+                // Basculer la classe 'open' pour changer l'icône
+                item.classList.toggle('open');
+
+                // Afficher ou masquer le contenu
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
