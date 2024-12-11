@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prendre un rendez-vous</title>
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="icon" href="logorond.PNG" type="image/x-icon">
     <style>
         body {
             margin: 0;
             font-family: 'Varela', sans-serif;
             font-size: 14px;
-            background-color: rgba(6, 114, 114, 0.774);
+            background-image: url('fond.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #333;
         }
-        header,footer {
-            background-color:rgb(1, 58, 58);
+
+        header,
+        footer {
+            background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
- /* Style de base du menu */
- nav {
+
+        /* Style de base du menu */
+        nav {
             background-color: #333;
             padding: 10px;
         }
@@ -54,15 +65,71 @@
             display: block;
             transition: background-color 0.3s;
         }
+
         .menu a:hover {
             background-color: #575757;
             /* Couleur au survol */
         }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: darkcyan;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 15px 0;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -73,9 +140,16 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
-
+        
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Prendre un rendez-vous</h1>
@@ -84,9 +158,19 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="rendez.html">Prendre rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <h2>Les Petits Travaux de CoCo</h2>
+    <div class="container">
+        <div class="form-container">
+            <!-- Intégration du formulaire Google -->
+            <iframe src="https://forms.gle/fCswUVRqtshctPmh8" frameborder="0">Chargement...</iframe>
+        </div>
+    </div>
 </body>
+
 </html>
+
+

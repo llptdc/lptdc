@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos</title>
+    <title>Prendre un rendez-vous</title>
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
     <link rel="icon" href="logorond.PNG" type="image/x-icon">
     <style>
@@ -18,26 +17,22 @@
             background-attachment: fixed;
             color: #333;
         }
-
-        header {
-            background-color: rgb(1, 58, 58);
+        header{
+            background-color:rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
         }
-
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         a {
             text-decoration: none;
             color: inherit;
         }
-
-        /* Style de base du menu */
-        nav {
+ /* Style de base du menu */
+ nav {
             background-color: #333;
             padding: 10px;
         }
@@ -64,7 +59,6 @@
             display: block;
             transition: background-color 0.3s;
         }
-
         .menu a:hover {
             background-color: #575757;
             /* Couleur au survol */
@@ -84,64 +78,52 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .box {
-            background-color: white;
+        .faq-container {
+            max-width: 800px;
+            margin: 30px auto;
             padding: 20px;
+            background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1;
         }
 
-        .box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .box h2 {
-            font-size: 1.8rem;
-            color: #003366;
+        .faq-item {
             margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
         }
 
-        .box p {
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #003366;
+            cursor: pointer;
+            padding: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #0055aa;
+        }
+
+        .faq-answer {
+            display: none;
             font-size: 1rem;
             line-height: 1.6;
             color: #555;
+            padding: 10px 0;
         }
 
-        .cta {
-            text-align: center;
-            margin-top: 20px;
-        }
 
-        .cta a {
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #003366;
-            color: white;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta a:hover {
-            background-color: #0055aa;
-        }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>À propos de nous</h1>
+        <h1>FAQ - Questions & Réponses</h1>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -152,39 +134,49 @@
         </nav>
     </header>
     <h2>Les Petits Travaux de CoCo</h2>
-    <div class="container">
-        <!-- Présentation -->
-        <div class="box">
-            <h2>Présentation</h2>
-            <p>
-            Les petits travaux de coco est une société de multiservice situé dans les Côte d'Armor (22), gérée et crée par un jeune homme prêt a vous rendre la vie quotidienne plus simple . 😉 
-            </p>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <p class="faq-question">Quoi ?</p>
+            <p class="faq-answer">Le multiservices pour vous fournir le plus d'aides que possible et vous satisfaire 👍🏻</p>
         </div>
 
-        <!-- Questions & Réponses -->
-        <div class="box">
-            <h2>Questions & Réponses</h2>
-            <p>
-                Vous avez des questions ? Consultez notre section FAQ pour obtenir des réponses rapides 
-                sur nos services, délais, et modalités.
-            </p>
-            <div class="cta">
-                <a href="faq.html">Voir les questions</a>
-            </div>
+        <div class="faq-item">
+            <p class="faq-question">A Qui ?</p>
+            <p class="faq-answer"> A chaque personnes qui ne peuvent plus le faire sois même et pour ceux qui n'ont pas le temps ⌚</p>
         </div>
 
-        <!-- Devis -->
-        <div class="box">
-            <h2>Demande de Devis</h2>
-            <p>
-                Pour un devis fait sur mesure nous vous invitons à compléter le formulaire dans la rubrique <a href="rendez.html"><strong>"Prendre rendez-vous"</strong></a>. 
-                Nous restons joignable par téléphone pour toutes questions merci .🙂
-            </p>
-            <div class="cta">
-            </div>
+        <div class="faq-item">
+            <p class="faq-question">Combien ?</p>
+            <p class="faq-answer">Chaque prestations demande un entretiens au préalable afin d'ajuster le meilleur tarif 💶</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">Comment ?</p>
+            <p class="faq-answer"> Disponible par mail , numéro de téléphone et par ce site web ( par l'onglet prendre rdv) 💻</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-question">Quand ?</p>
+            <p class="faq-answer">Dans les meilleurs délais pour vous satisfaire dans les plus brèves délais ⏳</p>
         </div>
     </div>
+    <script>
+        // Script pour afficher/masquer les réponses
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+
+                // Basculer la visibilité de la réponse
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+    
 
 </body>
-
 </html>

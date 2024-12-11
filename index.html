@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPTDC</title>
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="icon" href="logorond.PNG" type="image/x-icon">
     <style>
         body {
             margin: 0;
             font-family: 'Varela', sans-serif;
             font-size: 14px;
-            background-color: rgba(6, 114, 114, 0.774);
+            background-image: url('fond.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #333;
         }
+
         header {
-            background-color:rgb(1, 58, 58);
+            background-color: rgb(1, 58, 58);
             color: white;
             padding: 0px 30px;
-
-        }
-        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
+        header .logo {
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            font-size: 20px;
+            margin: 0px;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
         a {
             text-decoration: none;
             color: inherit;
         }
+
         .btn {
             background-color: darkcyan;
-            color:white;
-            border:none;
+            color: white;
+            border: none;
             padding: 10px 20px;
             margin: 5px;
             text-align: center;
@@ -42,27 +68,25 @@
             transition: 0.3s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
-        .btn:hover{
+
+        .btn:hover {
             transform: scale(1.1);
         }
- /* Style de base du menu */
- nav {
+
+        nav {
             background-color: #333;
             padding: 10px;
         }
 
         .menu {
             list-style: none;
-            /* Pas de puces */
             margin: 0;
             padding: 0;
             display: flex;
-            /* Alignement horizontal */
         }
 
         .menu>li {
             position: relative;
-            /* Pour le positionnement des sous-menus */
             margin-right: 20px;
         }
 
@@ -73,15 +97,16 @@
             display: block;
             transition: background-color 0.3s;
         }
+
         .menu a:hover {
             background-color: #575757;
-            /* Couleur au survol */
         }
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -92,32 +117,44 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
+
         .image-stylisee {
             width: 300px;
             height: auto;
-            border: 3px solid #007BFF; /* Bordure bleue */
-            border-radius: 10px; /* Coins arrondis */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre */
-            margin: 20px auto; /* Espacement */
-            display: block; /* Permet de centrer avec margin auto */
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            display: block;
         }
-        </style>
-<head>
+    </style>
+</head>
+
 <body>
     <header>
-        <h1>LPTDC</h1>
+            <h1>LPTDC</h1>
+        </div>
+
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="rendez.html">Prendre rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <h2>Les Petits Travaux de CoCo</h2>
-    <a href="exter.html" class="btn">Travaux d'Exterieur</a>
-    <a href="inter.html" class="btn">Travaux d'Interieur</a>
-    <a href="degag.html" class="btn">Degagement de vos encombrant</a>
+
+    <!-- Boutons d'action -->
+    <div style="text-align: center;">
+        <a href="exter.html" class="btn">Travaux d'Exterieur</a>
+        <a href="inter.html" class="btn">Travaux d'Interieur</a>
+        <a href="degag.html" class="btn">Dégagement de vos encombrants</a>
+    </div>
+
 
 </body>
+
 </html>

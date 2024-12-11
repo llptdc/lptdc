@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travaux d'Interieur</title>
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="icon" href="logorond.PNG" type="image/x-icon">
     <style>
         body {
             margin: 0;
             font-family: 'Varela', sans-serif;
             font-size: 14px;
+            background-image: url('fond.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #333;
         }
 
         header, footer {
@@ -70,10 +76,12 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            background-color: #fff;
         }
 
         .toggle-title {
-            background-color: #fff;
+            background-color: #f8f8f8;
             color: #333;
             padding: 15px;
             cursor: pointer;
@@ -82,7 +90,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            ;
         }
 
         .toggle-title:hover {
@@ -127,6 +134,14 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
+        .toggle-content ul {
+    padding-left: 20px; /* Indentation pour les puces */
+    margin: 10px 0;
+}
+
+.toggle-content li {
+    margin-bottom: 5px;
+}
 
     </style>
 </head>
@@ -139,6 +154,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="rendez.html">Prendre rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="icon" href="logorond.PNG" type="image/x-icon">
+    <!-- Lien vers la bibliothèque d'icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Varela', sans-serif;
+            font-size: 16px; /* Augmenter la taille de la police pour la lisibilité */
+            background-image: url('fond.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1; /* Espacement entre les lignes pour plus de lisibilité */
+        }
+        header, footer {
+            background-color: rgb(1, 58, 58);
+            color: white;
+            padding: 0 15px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu > li {
+            margin-right: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 40px;
+            color: #444;
+            text-align: center;
+            padding: 15px 30px;
+            border: 4px dashed #FF5722;
+            border-radius: 12px;
+            background-color: #FFF3E0;
+            margin: 30px auto;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-container a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .contact-container a:hover {
+            color: #007BFF;
+            background-color: #f2f2f2;
+        }
+
+        .contact-container .icon {
+            margin-right: 10px;
+            font-size: 22px;
+            color: #007BFF;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 30px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(1, 58, 58);
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Les Petits Travaux de CoCo</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="rendez.html">Prendre rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Les Petits Travaux de CoCo</h2>
+
+    <div class="contact-container">
+        <h3>Informations de Contact</h3>
+
+        <!-- Email -->
+        <a href="mailto:votreemail@example.com">
+            <i class="fas fa-envelope icon"></i>Email: lptdc22100@gmail.com
+        </a>
+
+        <!-- Téléphone -->
+        <a href="tel:+1234567890">
+            <i class="fas fa-phone-alt icon"></i>Téléphone: 07.81.34.87.03
+        </a>
+
+        <!-- Réseaux Sociaux -->
+        <h3>Suivez-nous sur :</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61569849834319" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/lptdc_off/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
