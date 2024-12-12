@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,8 @@
             color: #333;
         }
 
-        header, footer {
+        header,
+        footer {
             background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
@@ -28,6 +30,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            padding: 0px 15px;
         }
 
         a {
@@ -38,7 +42,7 @@
         /* Style de base du menu */
         nav {
             background-color: #333;
-            padding: 10px;
+            padding: 0px;
         }
 
         .menu {
@@ -118,11 +122,12 @@
             font-size: 14px;
             line-height: 1.6;
         }
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -134,12 +139,51 @@
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .menu {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu a {
+                padding: 15px;
+                border-bottom: 1px solid #575757;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Degagement d'emcombrant/autres</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -188,6 +232,10 @@
                 }
             });
         });
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
     </script>
 </body>
+
 </html>

@@ -13,15 +13,19 @@
         body {
             margin: 0;
             font-family: 'Varela', sans-serif;
-            font-size: 16px; /* Augmenter la taille de la police pour la lisibilité */
+            font-size: 16px;
+            /* Augmenter la taille de la police pour la lisibilité */
             background-image: url('fond.jpg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
             color: #333;
-            line-height: 1; /* Espacement entre les lignes pour plus de lisibilité */
+            line-height: 1;
+            /* Espacement entre les lignes pour plus de lisibilité */
         }
-        header, footer {
+
+        header,
+        footer {
             background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
@@ -31,6 +35,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            padding: 0px 15px;
         }
 
         h1 {
@@ -39,7 +45,7 @@
 
         nav {
             background-color: #333;
-            padding: 10px 0;
+            padding: 0px ;
         }
 
         .menu {
@@ -49,7 +55,7 @@
             display: flex;
         }
 
-        .menu > li {
+        .menu>li {
             margin-right: 20px;
         }
 
@@ -86,7 +92,8 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Fond légèrement transparent */
             border-radius: 8px;
             max-width: 600px;
             margin: 0 auto;
@@ -148,12 +155,55 @@
             color: white;
         }
 
+        .menu {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu a {
+                padding: 15px;
+                border-bottom: 1px solid #575757;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Les Petits Travaux de CoCo</h1>
+        <h1>Contact</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -190,6 +240,12 @@
             </a>
         </div>
     </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>

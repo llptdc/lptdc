@@ -19,7 +19,8 @@
             color: #333;
         }
 
-        header, footer {
+        header,
+        footer {
             background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
@@ -29,6 +30,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            padding: 0px 15px;
         }
 
         a {
@@ -39,7 +42,7 @@
         /* Style de base du menu */
         nav {
             background-color: #333;
-            padding: 10px;
+            padding: 0px;
         }
 
         .menu {
@@ -119,11 +122,12 @@
             font-size: 14px;
             line-height: 1.6;
         }
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -134,21 +138,67 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
+
         .toggle-content ul {
-    padding-left: 20px; /* Indentation pour les puces */
-    margin: 10px 0;
-}
+            padding-left: 20px;
+            /* Indentation pour les puces */
+            margin: 10px 0;
+        }
 
-.toggle-content li {
-    margin-bottom: 5px;
-}
+        .toggle-content li {
+            margin-bottom: 5px;
+        }
 
+        .menu {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu a {
+                padding: 15px;
+                border-bottom: 1px solid #575757;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Travaux d'Interieur</h1>
+
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -165,7 +215,7 @@
             <ul>
                 <li>Changer une ampoule, un fusible</li>
                 <li>Accrocher / décrocher / remplacer un lustre, des luminaires, un radiateur électrique</li>
-                <li>Fixer / changer / reparer une prise, un interupteur électrique</li>
+                <li>Fixer / changer / réparer une prise, un interupteur électrique</li>
                 <li>Poser / remplacer un detecteur de fumée, un capteur de présence</li>
             </ul>
         </div>
@@ -190,8 +240,8 @@
                 <li>Installer des triangles à rideau</li>
                 <li>Déplacer / déposer / ajuster un meuble</li>
                 <li>Monter / démonter un meuble en kit</li>
-                <li>fixer un miroir, un tableau au mur</li>
-                <li>fixer un accessoire de salle de bains, un rideau ou un pare-douche, une barre d'appui</li>
+                <li>Fixer un miroir, un tableau au mur</li>
+                <li>Fixer un accessoire de salle de bains, un rideau ou un pare-douche, une barre d'appui</li>
                 <li>Remplacer un flexible de douche, un abattant ou mécanisme dans les toilettes</li>
                 <li>Installer une étagère</li>
                 <li>Poser un store, une moustiquaire</li>
@@ -209,7 +259,7 @@
                 <li>Faire une retouche de peinture / de papier peint</li>
                 <li>Poncer, repeindre ou vernir un meuble</li>
                 <li>Reprendre des joints de carrelage</li>
-                <li> Reboucher une fissure, un trou</li>
+                <li>Reboucher une fissure, un trou</li>
                 <li>Remplacer / recoller un carreau de sol</li>
                 <li>Dépose de papier peint, moquette</li>
             </ul>
@@ -232,6 +282,10 @@
                     content.style.display = 'block';
                 }
             });
+        });
+
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
         });
     </script>
 </body>

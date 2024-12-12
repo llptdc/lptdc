@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,24 +18,28 @@
             background-attachment: fixed;
             color: #333;
         }
-        header{
-            background-color:rgb(1, 58, 58);
+
+        header {
+            background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
         }
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         a {
             text-decoration: none;
             color: inherit;
         }
- /* Style de base du menu */
- nav {
+
+        /* Style de base du menu */
+        nav {
             background-color: #333;
-            padding: 10px;
+            padding: 0px;
         }
 
         .menu {
@@ -59,15 +64,17 @@
             display: block;
             transition: background-color 0.3s;
         }
+
         .menu a:hover {
             background-color: #575757;
             /* Couleur au survol */
         }
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -78,6 +85,7 @@
             letter-spacing: 3px;
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
+
         .faq-container {
             max-width: 800px;
             margin: 30px auto;
@@ -118,12 +126,51 @@
             padding: 10px 0;
         }
 
+        .menu {
+            display: flex;
+        }
 
+        .menu-toggle {
+            display: none;
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu a {
+                padding: 15px;
+                border-bottom: 1px solid #575757;
+            }
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>FAQ - Questions & Réponses</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -138,22 +185,26 @@
     <div class="faq-container">
         <div class="faq-item">
             <p class="faq-question">Quoi ?</p>
-            <p class="faq-answer">Le multiservices pour vous fournir le plus d'aides que possible et vous satisfaire 👍🏻</p>
+            <p class="faq-answer">Le multiservices pour vous fournir le plus d'aides que possible et vous satisfaire
+                👍🏻</p>
         </div>
 
         <div class="faq-item">
             <p class="faq-question">A Qui ?</p>
-            <p class="faq-answer"> A chaque personnes qui ne peuvent plus le faire sois même et pour ceux qui n'ont pas le temps ⌚</p>
+            <p class="faq-answer"> A chaque personnes qui ne peuvent plus le faire sois même et pour ceux qui n'ont pas
+                le temps ⌚</p>
         </div>
 
         <div class="faq-item">
             <p class="faq-question">Combien ?</p>
-            <p class="faq-answer">Chaque prestations demande un entretiens au préalable afin d'ajuster le meilleur tarif 💶</p>
+            <p class="faq-answer">Chaque prestations demande un entretiens au préalable afin d'ajuster le meilleur tarif
+                💶</p>
         </div>
 
         <div class="faq-item">
             <p class="faq-question">Comment ?</p>
-            <p class="faq-answer"> Disponible par mail , numéro de téléphone et par ce site web ( par l'onglet prendre rdv) 💻</p>
+            <p class="faq-answer"> Disponible par mail , numéro de téléphone et par ce site web ( par l'onglet prendre
+                rdv) 💻</p>
         </div>
 
         <div class="faq-item">
@@ -175,8 +226,12 @@
                 }
             });
         });
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('.menu').classList.toggle('show');
+    });
     </script>
-    
+
 
 </body>
+
 </html>

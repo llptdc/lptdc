@@ -29,6 +29,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            padding: 0px 15px;
         }
 
         a {
@@ -39,7 +41,7 @@
         /* Style de base du menu */
         nav {
             background-color: #333;
-            padding: 10px;
+            padding: 0px;
         }
 
         .menu {
@@ -69,11 +71,12 @@
             background-color: #575757;
             /* Couleur au survol */
         }
+
         h2 {
             font-family: 'Georgia', serif;
             font-size: 40px;
             color: #444;
-            text-align:center;
+            text-align: center;
             padding: 15px 30px;
             border: 4px dashed #FF5722;
             border-radius: 12px;
@@ -136,12 +139,56 @@
         .cta a:hover {
             background-color: #0055aa;
         }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px 15px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .menu.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu a {
+                padding: 15px;
+                border-bottom: 1px solid #575757;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>À propos de nous</h1>
+        <button class="menu-toggle">☰</button>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
@@ -157,7 +204,8 @@
         <div class="box">
             <h2>Présentation</h2>
             <p>
-            Les petits travaux de coco est une société de multiservice situé dans les Côte d'Armor (22), gérée et crée par un jeune homme prêt a vous rendre la vie quotidienne plus simple . 😉 
+                Les petits travaux de coco est une société de multiservice situé dans les Côte d'Armor (22), gérée et
+                crée par un jeune homme prêt a vous rendre la vie quotidienne plus simple . 😉
             </p>
         </div>
 
@@ -165,7 +213,7 @@
         <div class="box">
             <h2>Questions & Réponses</h2>
             <p>
-                Vous avez des questions ? Consultez notre section FAQ pour obtenir des réponses rapides 
+                Vous avez des questions ? Consultez notre section FAQ pour obtenir des réponses rapides
                 sur nos services, délais, et modalités.
             </p>
             <div class="cta">
@@ -177,14 +225,19 @@
         <div class="box">
             <h2>Demande de Devis</h2>
             <p>
-                Pour un devis fait sur mesure nous vous invitons à compléter le formulaire dans la rubrique <a href="rendez.html"><strong>"Prendre rendez-vous"</strong></a>. 
+                Pour un devis fait sur mesure nous vous invitons à compléter le formulaire dans la rubrique <a
+                    href="rendez.html"><strong>"Prendre rendez-vous"</strong></a>.
                 Nous restons joignable par téléphone pour toutes questions merci .🙂
             </p>
             <div class="cta">
             </div>
         </div>
     </div>
-
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
