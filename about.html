@@ -23,14 +23,10 @@
             background-color: rgb(1, 58, 58);
             color: white;
             padding: 0 15px;
-        }
-
-        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
-            padding: 0px 15px;
         }
 
         a {
@@ -38,24 +34,19 @@
             color: inherit;
         }
 
-        /* Style de base du menu */
         nav {
             background-color: #333;
-            padding: 0px;
         }
 
         .menu {
             list-style: none;
-            /* Pas de puces */
             margin: 0;
             padding: 0;
             display: flex;
-            /* Alignement horizontal */
         }
 
         .menu>li {
             position: relative;
-            /* Pour le positionnement des sous-menus */
             margin-right: 20px;
         }
 
@@ -69,7 +60,6 @@
 
         .menu a:hover {
             background-color: #575757;
-            /* Couleur au survol */
         }
 
         h2 {
@@ -111,9 +101,11 @@
         }
 
         .box h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: #003366;
             margin-bottom: 15px;
+            text-align: center;
+            padding: 10px 0;
         }
 
         .box p {
@@ -138,10 +130,6 @@
 
         .cta a:hover {
             background-color: #0055aa;
-        }
-
-        .menu {
-            display: flex;
         }
 
         .menu-toggle {
@@ -182,6 +170,23 @@
                 border-bottom: 1px solid #575757;
             }
         }
+
+        @media (max-width: 375px) {
+            .box {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 28px;
+                padding: 10px 20px;
+            }
+
+            .box p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -204,8 +209,8 @@
         <div class="box">
             <h2>Présentation</h2>
             <p>
-                Les petits travaux de coco est une société de multiservice situé dans les Côte d'Armor (22), gérée et
-                crée par un jeune homme prêt a vous rendre la vie quotidienne plus simple . 😉
+                Les petits travaux de coco est une société de multiservice située dans les Côte d'Armor (22), gérée et
+                créée par un jeune homme prêt à vous rendre la vie quotidienne plus simple . 😉
             </p>
         </div>
 
@@ -225,12 +230,10 @@
         <div class="box">
             <h2>Demande de Devis</h2>
             <p>
-                Pour un devis fait sur mesure nous vous invitons à compléter le formulaire dans la rubrique <a
+                Pour un devis fait sur mesure, nous vous invitons à compléter le formulaire dans la rubrique <a
                     href="rendez.html"><strong>"Prendre rendez-vous"</strong></a>.
-                Nous restons joignable par téléphone pour toutes questions merci .🙂
+                Nous restons joignables par téléphone pour toutes questions. Merci 🙂
             </p>
-            <div class="cta">
-            </div>
         </div>
     </div>
     <script>
