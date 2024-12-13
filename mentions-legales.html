@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+    <link rel="icon" href="Logonew2.png" type="image/x-icon">
+    <title>Mentions Légales</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Varela', sans-serif;
+        font-size: 14px;
+        background-image: url('fond.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #333;
+    }
+
+    header {
+        background-color: rgb(1, 58, 58);
+        color: white;
+        padding: 15px 15px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo {
+        height: 40px;
+        margin-right: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .logo-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .btn {
+        background-color: darkcyan;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+    }
+
+    nav {
+        background-color: #333;
+        padding: 0px;
+    }
+
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu>li {
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+        background-color: #575757;
+    }
+
+
+    .image-stylisee {
+        width: 300px;
+        height: auto;
+        border: 3px solid #007BFF;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin: 20px auto;
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #333;
+        color: white;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px 15px;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+        }
+
+        .menu.show {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        .menu a {
+            padding: 15px;
+            border-bottom: 1px solid #575757;
+        }
+    }
+    p {
+        color: black;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Mentions Légales</h1>
+
+        <button class="menu-toggle">☰</button>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="rendez.html">Prendre rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Mentions Légales</h2>
+    <p style="white-space: pre-wrap;">
+        Éditeur  
+        llptdc.github.io est un site web, accessible par les utilisateurs à l’adresse URL suivante
+        https://llptdc.github.io/lptdc, édité par : Anthony LEMONNIER
+
+        Identité : BONNEROT Corentin
+        Numéro d’inscription : 938433919   
+        Adresse : cité de l’écuyer , Dinan 22100 FRANCE
+        Téléphone : 0781348703 Mail : lptdc22100@gmail.com
+
+        Directeur de la publication  
+        Identité : BONNEROT Corentin, Gérant 
+
+        Hébergeur  
+        llptdc.github.io est hébergé par Github , que vous pouvez contacter à l’adresse email privacy@github.com ou
+        l’adresse postale suivante 88 Colin P KELLY JR ST SAN FRANCISCO
+        GitHub,inc 
+        Adresse :  88 Colin P KELLY JR ST SAN FRANCISCO
+        Téléphone :+1 877 448 4820 Mail :  privacy@github.com
+
+        Le site se réserve la possibilité de compléter ou modifier les présentes mentions légales à tout moment et sans
+        préavis.  
+        Le site invite l’utilisateur à consulter régulièrement les présentes mentions légales. </p>
+    <p>Pour connaître notre politique de gestion des données personnelles, consultez notre <a
+            href="politique-confidentialite.html"><u><strong>politique de confidentialité</strong></u></a>.</p>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
